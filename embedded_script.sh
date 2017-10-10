@@ -53,7 +53,7 @@ kernel_make()
     cd "$cur_dir"
 }
 
-make_user()
+user_make()
 
 {
     cur_dir="$(pwd)"
