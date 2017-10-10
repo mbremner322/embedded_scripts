@@ -12,3 +12,6 @@ git pull
 source embedded_script.sh
 cd
 
+
+
+hi
