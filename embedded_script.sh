@@ -35,7 +35,7 @@ kernel_setup()
 
 # pass in the module name as an argument
 # makes the module and pushes onto the tablet
-make_module()
+module_make()
 {
     cur_dir="$(pwd)"
     cd ~/kernel
@@ -44,7 +44,7 @@ make_module()
     cd "$cur_dir"
 }
 
-make_kernel()
+kernel_make()
 {
     cur_dir="$(pwd)"
     export CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm
