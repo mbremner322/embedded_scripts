@@ -47,6 +47,8 @@ module_make()
 kernel_make()
 {
     cur_dir="$(pwd)"
+    cd ~/kernel/rtes/kernel
+    rm *.o
     export CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm
     cd ~/kernel
     colormake
