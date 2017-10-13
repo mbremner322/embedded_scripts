@@ -38,6 +38,8 @@ kernel_setup()
 module_make()
 {
     cur_dir="$(pwd)"
+    cd ~/kernel/rtes/modules/$1
+    rm *.ko
     cd ~/kernel
     colormake M=rtes/modules/$1
     adb push rtes/modules/$1/$1.ko data
@@ -56,7 +58,6 @@ kernel_make()
 }
 
 user_make()
-
 {
     cur_dir="$(pwd)"
     cd ~/kernel
@@ -80,3 +81,4 @@ new_kernel_repo()
     file arch/arm/boot/compressed/vmlinux
 }
 
+alias shello='adb shell'
