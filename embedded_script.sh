@@ -82,3 +82,5 @@ new_kernel_repo()
 }
 
 alias shello='adb shell'
+alias ks='kernel_setup'
+alias km='kernel_make'
