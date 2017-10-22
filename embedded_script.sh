@@ -63,7 +63,7 @@ user_make()
     cd ~/kernel
     make headers_install
     cd ~/kernel/rtes/apps/$1
-    rm $1
+    colormake clean
     colormake
     adb push $1 data
     cd "$cur_dir"
