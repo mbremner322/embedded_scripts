@@ -1,3 +1,16 @@
+# here are some functions to make our lives much nicer!
+# put something like this in your bashrc!
+
+#DIRECTORY="embedded_scripts"
+#cd
+#if [ ! -d "$DIRECTORY" ]; then
+#    git clone https://github.com/mbremner322/embedded_scripts.git
+#fi
+#cd "$DIRECTORY"
+#git pull (optional)
+#source embedded_script.sh
+#cd
+
 
 # everything you need to make kernel / any user app
 user_setup()
@@ -79,6 +92,20 @@ new_kernel_repo()
     make oldconfig
     make
     file arch/arm/boot/compressed/vmlinux
+}
+
+update_scripts()
+{
+    cur_dir="$(pwd)"
+    DIRECTORY="embedded_scripts"
+    cd
+    if [ ! -d "$DIRECTORY" ]; then
+        git clone https://github.com/mbremner322/embedded_scripts.git
+    fi
+    cd "$DIRECTORY"
+    git pull
+    source embedded_script.sh
+    cd "$cur_dir"
 }
 
 alias shello='adb shell'
