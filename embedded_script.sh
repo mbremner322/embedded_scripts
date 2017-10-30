@@ -111,3 +111,4 @@ update_scripts()
 alias shello='adb shell'
 alias ks='kernel_setup'
 alias km='kernel_make'
+alias SHELLO='adb shell' # in honor of anand
