@@ -44,6 +44,7 @@ kernel_setup()
     RAMDISK=~/nakasi-jdq39/boot-img/boot.img-ramdisk-root.gz
     fastboot boot arch/arm/boot/zImage $RAMDISK
     cd "$cur_dir"
+    adb shell "source /data/auto_hotplug.sh"
 }
 
 # pass in the module name as an argument
